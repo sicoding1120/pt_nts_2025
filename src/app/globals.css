@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+.bg-hero {
+  background-image: url('/assets/BG2.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-about {
+  background-image: url('/assets/background.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.bg-gallery {
+  background-image: url('/assets/img4.jpeg');
+  background-size: cover;
+  
+  background-repeat: no-repeat;
+}
+
