@@ -4,9 +4,11 @@ import Header from '@/components/header'
 import Button from '@/components/ui/button'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 
 const AboutPage = () => {
+  const [isOpen, setIsOpen] = useState(false)
+
   return (
     <main className='w-full h-full'>
       <Header />
@@ -174,14 +176,47 @@ const AboutPage = () => {
         <div className='w-full flex flex-col items-center'>
           <div className='flex flex-col justify-center items-center gap-4'>
             <h2 className='md:text-6xl text-4xl font-bold capitalize text-center '>
-            struktur Perusahaan
+              struktur Perusahaan
             </h2>
             <span className='w-full h-1 bg-[#325775] rounded-full'></span>
           </div>
         </div>
         <div className='w-full h-full flex justify-center items-center'>
-          <div className='w-2/3 h-full pb-4 md:pb-14'>
-            <Image src={"/assets/stuktur.jpeg"} alt='struckture' width={200} height={200} className='w-full h-full'/>
+          ;
+          <div className='md:w-1/2 w-full px-4 h-full pb-4 md:pb-14'>
+            {/* Gambar kecil */}
+            <Image
+              src={'/assets/stuktur.jpeg'}
+              alt='structure'
+              width={300}
+              height={300}
+              className='w-full h-full cursor-pointer'
+              onClick={() => setIsOpen(true)}
+            />
+
+            {/* Modal */}
+            {isOpen && (
+              <div
+                className='fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-[999999]'
+                onClick={() => setIsOpen(false)}
+              >
+                <div className='relative max-w-6xl w-full md:h-full h-2/3 flex justify-center items-center px-6 py-6 '>
+                  <Image
+                    src={'/assets/stuktur.jpeg'}
+                    alt='structure full'
+                    width={300}
+                    height={300}
+                    className='w-full h-full  rounded-lg shadow-lg'
+                  />
+                  <button
+                    className='absolute top-4 right-4 bg-white rounded-full p-2 text-black shadow'
+                    onClick={() => setIsOpen(false)}
+                  >
+                    ✕
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>

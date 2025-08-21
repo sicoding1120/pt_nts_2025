@@ -115,7 +115,7 @@ export default function Home () {
                 key={idx}
                 src={src}
                 alt={`logo-${idx}`}
-                className='h-16 mx-6 object-contain'
+                className='h-16 mx-6 object-contain scale-110'
               />
             ))}
           </Marquee>
