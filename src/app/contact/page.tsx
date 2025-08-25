@@ -78,7 +78,7 @@ const ContactPage = () => {
                   <div className='w-full flex justify-center items-center'>
                     <button
                       type='submit'
-                      className='w-1/2 h-12 rounded-xl text-[#325775] capitalize font-semibold flex justify-center items-center bg-[#181818]'
+                      className='w-1/2 h-12 rounded-xl text-white capitalize font-semibold flex justify-center items-center bg-[#181818]'
                     >
                       send Message
                     </button>
