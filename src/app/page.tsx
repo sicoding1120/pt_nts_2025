@@ -102,7 +102,7 @@ export default function Home () {
       <section className='w-full h-[40vh] flex flex-col items-center py-16 gap-4'>
         <div className='flex flex-col justify-center items-center gap-4'>
           <h2 className='text-5xl font-bold capitalize text-center '>
-            our Costumer
+            Our Costumer
           </h2>
           <span className='w-full h-1 bg-[#325775] rounded-full'></span>
         </div>

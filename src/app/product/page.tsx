@@ -87,7 +87,7 @@ export default function ProductPage () {
                 <button
                   key={i}
                   onClick={() => handleFilter(d)}
-                  className='w-full h-full bg-[#181818] text-[#325775] hover:border-b-[#325775]  rounded-full capitalize font-semibold border-2 border-transparent transition-all hover:bg-transparent py-1 '
+                  className='w-full h-full bg-[#181818] text-[#ffff] hover:border-b-[#325775]  rounded-full capitalize font-semibold border-2 border-transparent transition-all hover:bg-transparent py-1 '
                 >
                   {d.title}
                 </button>
