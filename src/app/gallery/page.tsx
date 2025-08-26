@@ -38,7 +38,7 @@ const GalleryPage = () => {
           </h2>
           <span className='w-full h-1 bg-[#325775] rounded-full'></span>
         </div>
-        <div className='w-full h-full px-8 grid grid-cols-4 gap-6 mt-6'>
+        <div className='w-full h-full px-8 grid md:grid-cols-4 grid-cols-1 gap-6 mt-6'>
           {Training.map((d: TrainingType) => (
             <div
               className='w-full h-[400px] shadow-sm rounded-xl border p-4 flex flex-col gap-4'
@@ -75,7 +75,7 @@ const GalleryPage = () => {
           </h2>
           <span className='w-full h-1 bg-[#325775] rounded-full'></span>
         </div>
-        <div className='w-full h-full px-8 grid grid-cols-4 gap-6 mt-6'>
+        <div className='w-full h-full px-8 grid md:grid-cols-4 grid-cols-1 gap-6 mt-6'>
           {News.map((d: NewsType) => (
             <div
               className='w-full h-[400px] shadow-sm rounded-xl border p-4 flex flex-col gap-4'
