@@ -1,64 +1,17 @@
+// import React from 'react'
 'use client'
+
 import Footer from '@/components/footer'
 import Header from '@/components/header'
-import Button from '@/components/ui/button'
-// import { motion } from 'framer-motion'
-import Image from 'next/image'
 import { useRouter } from 'next/navigation'
-import React, { useState } from 'react'
-// import Legalitas from './legalitas/page';
+import Image from 'next/image'
 
-const AboutPage = () => {
-  const [isOpen, setIsOpen] = useState(false)
-  const router =  useRouter()
-
+const Legalitas = () => {
+  const router = useRouter()
   return (
     <main className='w-full h-full'>
       <Header />
-      <section className='w-full md:h-full h-full flex flex-col md:flex-row pt-20'>
-        <div className='md:w-1/2 w-full md:h-screen h-[300px] bg-about rounded-r-xl'></div>
-        <div className='md:w-1/2 w-full h-full py-14 md:py-0 flex flex-col items-center gap-6 px-8'>
-          <div className='flex flex-col justify-center items-center gap-4'>
-            <h2 className='md:text-6xl text-4xl font-bold capitalize text-center '>
-              Tentang Kami
-            </h2>
-            <span className='w-full h-1 bg-[#325775] rounded-full'></span>
-          </div>
-          <p className=' text-center pt-4'>
-            Perusahaan Manufacture,Fabrikasi Dan EDP Dengan Layanan Prima Serta
-            Memenuhi Kebutuhan dan Kepuasan Pelanggan
-          </p>
-          <p className='text-justify'>
-            PT Namura Tehnik Sejahtera adalah Perusahaan Jasa
-            Manufacture,Fabrikasi Dan EDP yang berdedikasi untuk menghasilkan
-            produk berkualitas tinggi melalui proses Manufacture yang inovatif
-            dan efisien. Berdiri kuat di balik prinsip-prinsip kualitas,
-            keberlanjutan, dan keunggulan operasional, perusahaan ini telah
-            mendedikasikan dirinya untuk memenuhi kebutuhan pelanggan dan
-            membangun hubungan jangka panjang.
-          </p>
-          <span className='font-bold flex justify-start items-start w-full text-2xl'>
-            VISI
-          </span>
-          <p className='text-justify'>
-            menjadi Perusahaan Manufacture,Fabrikasi Dan EDP Dengan Layanan
-            Prima Serta Memenuhi Kebutuhan dan Kepuasan Pelanggan. Mengedepankan
-            keselamatan dan kesehatan kerja untuk meningkatkan produktivitas
-            kerja Menciptakan kondisi kerja yang nyaman dan aman Menciptakan
-            kondisi lapangan kerja dengan mengedepankan tenaga kerja yang handal
-            dan berkemampuan pada bidangnya
-          </p>
-          <span className='font-bold flex justify-start items-start w-full text-2xl'>
-            MISI
-          </span>
-          <p className='text-justify'>
-            Menjadi perusahaan Manufacture,Fabrikasi Dan EDP terbaik,
-            berkualitas dan terpercaya
-          </p>
-          <Button>Learn More</Button>
-        </div>
-      </section>
-      <section className='w-full flex md:h-screen h-full flex-col items-center gap-4 md:mt-14 mt-8 mb-4'>
+      <section className='w-full flex md:h-screen h-full flex-col items-center gap-4 md:mt-24 mt-8 mb-4'>
         <div className='w-full flex flex-col items-center'>
           <div className='flex flex-col justify-center items-center gap-4'>
             <h2 className='md:text-6xl text-4xl font-bold capitalize text-center '>
@@ -133,7 +86,7 @@ const AboutPage = () => {
                 />
               </motion.div>
             </div> */}
-            
+
             <iframe
               src='/pdf/legalitas.pdf'
               className='w-full h-full'
@@ -178,62 +131,76 @@ const AboutPage = () => {
                 S-2118KT/WPJ.33/KP.0703/2020
               </p>
             </div>
-            <button className='bg-[#325775] text-white py-2 px-4 rounded-full mt-8 font-semibold text-xl cursor-pointer active:scale-90 transition-all' onClick={() =>router.push("/about/legalitas") }>
-              lihat Legalitas
-            </button>
           </div>
         </div>
       </section>
-      <section className='w-full md:h-screen h-[60vh] mb-12'>
+      <section className='w-full h-full flex flex-col gap-4 mt-12 '>
         <div className='w-full flex flex-col items-center'>
           <div className='flex flex-col justify-center items-center gap-4'>
             <h2 className='md:text-6xl text-4xl font-bold capitalize text-center '>
-              struktur Perusahaan
+              Dokumen Legalitas
             </h2>
             <span className='w-full h-1 bg-[#325775] rounded-full'></span>
           </div>
         </div>
-        <div className='w-full h-full flex justify-center items-center'>
-          <div className='md:w-1/2 w-full px-4 h-full pb-4 md:pb-14'>
-            {/* Gambar kecil */}
-            <Image
-              src={'/assets/stuktur.jpeg'}
-              alt='structure'
-              width={300}
-              height={300}
-              className='w-full h-full cursor-pointer'
-              onClick={() => setIsOpen(true)}
-            />
-
-            {/* Modal */}
-            {isOpen && (
-              <div
-                className='fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-[999999]'
-                onClick={() => setIsOpen(false)}
-              >
-                <div className='relative max-w-6xl w-full md:h-full h-2/3 flex justify-center items-center px-6 py-6 '>
-                  <Image
-                    src={'/assets/stuktur.jpeg'}
-                    alt='structure full'
-                    width={300}
-                    height={300}
-                    className='w-full h-full  rounded-lg shadow-lg'
-                  />
-                  <button
-                    className='absolute top-4 right-4 bg-white rounded-full p-2 text-black shadow'
-                    onClick={() => setIsOpen(false)}
-                  >
-                    ✕
-                  </button>
-                </div>
-              </div>
-            )}
+        <div className='w-full grid grid-cols-2 gap-4 px-12 mt-8'>
+          <div className='w-full h-[60vh] shadow-md  border-2 border-slate-200 py-4 overflow-y-scroll rounded-xl'>
+            <div className='w-full h-full'>
+              <Image
+                src={'/assets/legalitas/1.jpeg'}
+                alt={'legalitas 1'}
+                width={300}
+                height={600}
+                className='w-full h-screen'
+              />
+            </div>
+          </div>
+          <div className='w-full h-[60vh] shadow-md  border-2 border-slate-200 py-4 overflow-y-scroll rounded-xl'>
+            <div className='w-full h-full'>
+              <Image
+                src={'/assets/legalitas/2.jpeg'}
+                alt={'legalitas 1'}
+                width={300}
+                height={600}
+                className='w-full h-screen'
+              />
+            </div>
+          </div>
+          <div className='w-full h-[60vh] shadow-md  border-2 border-slate-200 py-4 overflow-y-scroll rounded-xl'>
+            <div className='w-full h-full'>
+              <Image
+                src={'/assets/legalitas/3.jpeg'}
+                alt={'legalitas 1'}
+                width={300}
+                height={600}
+                className='w-full h-screen'
+              />
+            </div>
+          </div>
+          <div className='w-full h-[60vh] shadow-md  border-2 border-slate-200 py-4 overflow-y-scroll rounded-xl'>
+            <div className='w-full h-full'>
+              <Image
+                src={'/assets/legalitas/4.jpeg'}
+                alt={'legalitas 1'}
+                width={300}
+                height={600}
+                className='w-full h-screen'
+              />
+            </div>
           </div>
         </div>
+      </section>
+      <section className='w-full h-full py-4 flex justify-center items-center'>
+        <button
+          className='bg-[#325775] text-white py-2 px-4 rounded-full mt-8 font-semibold text-xl cursor-pointer active:scale-90 transition-all'
+          onClick={() => router.push('/about')}
+        >
+          kembali ke about
+        </button>
       </section>
       <Footer />
     </main>
   )
 }
 
-export default AboutPage
+export default Legalitas
