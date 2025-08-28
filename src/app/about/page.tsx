@@ -10,7 +10,7 @@ import React, { useState } from 'react'
 
 const AboutPage = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const router =  useRouter()
+  const router = useRouter()
 
   return (
     <main className='w-full h-full'>
@@ -133,12 +133,16 @@ const AboutPage = () => {
                 />
               </motion.div>
             </div> */}
-            
-            <iframe
-              src='/pdf/legalitas.pdf'
-              className='w-full h-full'
-              title='PDF Viewer'
-            />
+
+            <div className='w-full h-full'>
+              <Image
+                src={'/assets/legalitas/3.jpeg'}
+                alt={'legalitas 1'}
+                width={300}
+                height={600}
+                className='w-full h-screen'
+              />
+            </div>
           </div>
           <div className='md:w-1/2 w-full h-full p-4 rounded-2xl flex flex-col justify-center'>
             <div className='text-gray-700 md:text-lg text-sm leading-relaxed'>
@@ -178,7 +182,10 @@ const AboutPage = () => {
                 S-2118KT/WPJ.33/KP.0703/2020
               </p>
             </div>
-            <button className='bg-[#325775] text-white py-2 px-4 rounded-full mt-8 font-semibold text-xl cursor-pointer active:scale-90 transition-all' onClick={() =>router.push("/about/legalitas") }>
+            <button
+              className='bg-[#325775] text-white py-2 px-4 rounded-full mt-8 font-semibold text-xl cursor-pointer active:scale-90 transition-all'
+              onClick={() => router.push('/about/legalitas')}
+            >
               lihat Legalitas
             </button>
           </div>
